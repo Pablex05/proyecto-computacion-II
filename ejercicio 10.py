@@ -1,0 +1,1 @@
+"""disculpe por no hacer el ejercicio, cuando lo ejecuto se me cierra la sesion de linux :v, demaciado literal, y la semana anterior me hizo crashear el mismo sistema y tuve que reinstalar ubuntu, antes de cometer mas errores necesitaria una explicacion de como se implementa, y disculpe por no poder realizar este ejercicio"
