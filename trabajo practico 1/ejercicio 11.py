@@ -1,10 +1,22 @@
-import os,sys,time
+"""
+Escribir un programa que lance dos procesos hijos (fork).
+Uno de los procesos hijos se encargará de leer desde la entrada estándar líneas de
+texto, y en la medida en que el usuario escriba, el proceso las irá enviando por un pipe
+que compartirá con el otro proceso hijo.
+El segundo proceso se encargará de leer desde el pipe las líneas que el primer proceso
+escriba, y las irá mostrando por pantalla en el formato “Leyendo (pid: 1234):
+mensaje”, donde 1234 es el pid de este segundo proceso, y “mensaje” es el contenido
+leído desde el pipe.
+"""
+
+import os, time, sys, multiprocessing, pipes
+
 def proceso():
     global line
     r, w = os.pipe()
     processid = os.fork()
     if processid:
-        print("******************Proceso padre*****************")
+        print("******************PROCESO PADRE*****************")
     if processid==0:
         os.close(r)
         w = os.fdopen(w,'w')
@@ -19,10 +31,9 @@ def proceso():
         os.close(w)
         r = os.fdopen(r)
         for line in r:
-            print("-----proceso hijo 2----")
             os.getpid()
-            print("\nmensaje: ")
-        print("%s" % line)
+            print("\nleyendo %d: %s " % (os.getpid(),line))
+            print("------------escribir mensaje---------------")
         sys.exit(0)
     os.wait()
     os.wait()
