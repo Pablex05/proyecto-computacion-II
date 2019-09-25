@@ -14,10 +14,10 @@ import os, time, sys, multiprocessing, pipes
 def proceso():
     global line
     r, w = os.pipe()
-    processid = os.fork()
-    if processid:
+    pid1 = os.fork()
+    if pid1:
         print("******************PROCESO PADRE*****************")
-    if processid==0:
+    if pid1==0:
         os.close(r)
         w = os.fdopen(w,'w')
         print("------------escribir mensaje---------------")
@@ -25,7 +25,7 @@ def proceso():
             w.write("%s" % line)
             w.flush()
         sys.exit(0)
-    pid2=os.fork()
+    pid2 = os.fork()
     if pid2==0:
         time.sleep(3)
         os.close(w)

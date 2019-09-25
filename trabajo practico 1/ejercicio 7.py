@@ -21,7 +21,6 @@ def proceso():
         while (x==0):
             os.kill(pid, signal.SIGUSR1)
             time.sleep(5)
-
             if (x!=0):
                 break
 

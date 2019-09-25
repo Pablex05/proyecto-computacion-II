@@ -10,7 +10,6 @@ pid = os.fork()
 if pid:
     os.close(r)
     w = os.fdopen(w,"w")
-
     w.write(lectura)
     w.close()
     os.wait()
