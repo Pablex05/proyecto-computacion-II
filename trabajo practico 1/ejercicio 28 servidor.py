@@ -6,7 +6,7 @@ def hijo(clin, direc, n):
     while True:
         men = clin.recv(1024)
         if men.decode("ascii") == "exit" or men.decode("ascii") == "EXIT":
-            clin.exit()
+            clin.__exit__()
             break  # sale del while si recibe la palabra clave "exit"
         print("PID: ", os.getpid()," desde:", direc," peername: ", clin.getpeername(), "soketname:", clin.getsockname(),
               " Recibido: ", men.decode("ascii"))

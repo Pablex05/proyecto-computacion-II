@@ -49,7 +49,5 @@ if __name__ == "__main__":
         except EOFError:
             print("Fin de línea (1)")  # por alguna razón no salta este error
             break
-
-
     print("Cerrando programa")
     serversocket.close()
