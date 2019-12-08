@@ -19,10 +19,8 @@ def hijo(num):
         clientsocket.sendto(fin.encode("ascii"), (host, port))
         clientsocket.close()
         print("success")
-        # return 1
     except:
         print("error")
-        # return 0
 
 if __name__ == "__main__":
     t_ini = time.time()

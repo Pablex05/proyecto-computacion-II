@@ -21,7 +21,7 @@ if __name__ == "__main__":
         print("Error al crear socket de server")
         sys.exit()
     host = ""
-    port = int(sys.argv[1])  # recibe desde linea de comando
+    port = int(sys.argv[1]) 
     serversocket.bind((host, port))
     serversocket.listen(5)
     print("Escuchando - creando hijos...")
@@ -36,4 +36,3 @@ if __name__ == "__main__":
             hijo(cs, d, n)
         else:
             time.sleep(1)
-            #os.wait()

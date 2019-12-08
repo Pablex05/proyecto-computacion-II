@@ -59,7 +59,7 @@ def hilo(clin, direc, n):
                     men = str("Serv: Leyendo archivo...")
                     clin.send(men.encode("ascii"))
                     leido = file.read()
-                    clin.send(leido.encode("ascii"))  # manda 1 por 1 las
+                    clin.send(leido.encode("ascii"))
                     file.close()
                     file = open(aux, 'a+')
                 elif tarea == "cerrar" or tarea == "CERRAR":
