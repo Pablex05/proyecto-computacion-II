@@ -43,8 +43,8 @@ def hilo(clin, direc, n):
                 if tarea == "agregar" or tarea == "AGREGAR":
                     men = str("Serv: Ingrese el contenido que desea agregar al archivo")
                     clin.send(men.encode("ascii"))
-                    recivido = clin.recv(1024)
-                    agregacion = recivido.decode("ascii")
+                    recibido = clin.recv(1024)
+                    agregacion = recibido.decode("ascii")
                     try:
                         file.write(agregacion)
                         file.write("\n")
