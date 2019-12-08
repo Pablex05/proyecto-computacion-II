@@ -1,0 +1,33 @@
+
+Ejercicio nº32:
+usando python - n=1 m=35
+->Iteración:  1.090645
+->Recursión: 219.005383
+->Total: 3m40, 714s
+
+usando pypy3 - n=1 m=35
+->Iteración: 5.024431
+->Recursión: 38.316324
+->Total: 0m5, 484s
+
+Ejercicio nº33:
+usando python - n=1 m=35
+->Iteración: 0.05369 lmao
+->Recursión: 418.5584 (4 minutos)
+->Total: 7m1, 443s
+
+Usando pypy3 - n=1 m=35
+-Iteración: 4.4390
+-Recursión: 204.7666
+-Total: 3m30, 509s
+
+¿qué diferencia nota al usar pypy3?
+RTA:	usar pypy3 el tiempo de ejecucion disminuye en la funcion recursiva, pero aumenta el tiempo 
+	de ejecucion en la funcion iterativa
+
+Investigación:
+¿Qué es pypy3 y para que sirve?
+Es un intérprete y compilador de traducción dinámica (JIT) para lenguaje Python, compatible con
+el original CPython, pero más rápido y eficiente.
+También viene con soporte para un modo "Stackless", que seria para crear micro-hilos,
+y que permiten que la ejecución que sea más dinámica/rápida.
